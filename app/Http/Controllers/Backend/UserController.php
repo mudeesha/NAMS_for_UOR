@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Employee;
 
 class UserController extends Controller
 {
@@ -44,5 +45,10 @@ class UserController extends Controller
         
 
         return redirect()->route('user.view')->with($notification);
+    }
+
+    public function ShowProfile(){
+        $data= Employee::all();
+        return view ('profile',['Employeez'=>$data]);
     }
 }

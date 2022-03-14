@@ -14,7 +14,10 @@ class CreateDesignationsTable extends Migration
     public function up()
     {
         Schema::create('designations', function (Blueprint $table) {
-            $table->id();
+            $table->string('designation_id')->primary();
+            $table->string('permission_id');
+            $table->foreign('permission_id')->references('permission_id')->on('permissions');
+            $table->string('designation_name');
             $table->timestamps();
         });
     }

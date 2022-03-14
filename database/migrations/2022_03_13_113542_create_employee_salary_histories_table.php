@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateEmployeeSalaryHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('salary__scales', function (Blueprint $table) {
+        Schema::create('employee_salary_histories', function (Blueprint $table) {
+            $table->string('emp_id')->primary();
             $table->string('salary_scale_id');
-            $table->string('scale');
+            $table->foreign('salary_scale_id')->references('salary_scale_id')->on('salary_scales');
+            $table->string('changed_date');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('salary__scales');
+        Schema::dropIfExists('employee_salary_histories');
     }
-};
+}

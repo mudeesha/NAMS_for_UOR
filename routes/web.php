@@ -18,6 +18,9 @@ use App\Http\Controllers\Backend\UserController;
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('admin.index');
@@ -36,8 +39,10 @@ Route::prefix('users')->group(function(){
 
     Route::post('/store',[UserController::class, 'UserStore'])->name('users.store');
 
-});
+    
 
+});
+Route::get('/profile',[UserController::class, 'ShowProfile'])->name('Show.Profile');
 
 
 

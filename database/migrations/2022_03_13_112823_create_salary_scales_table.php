@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateSalaryScalesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('system__users', function (Blueprint $table) {
-            $table->string('user_id');
-            $table->string('role_id');
-            $table->string('username');
-            $table->string('password');
+        Schema::create('salary_scales', function (Blueprint $table) {
+            $table->string('salary_scale_id')->primary();
+            $table->string('scale');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('system__users');
+        Schema::dropIfExists('salary_scales');
     }
-};
+}
