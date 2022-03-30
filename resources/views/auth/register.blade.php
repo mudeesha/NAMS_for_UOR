@@ -42,13 +42,13 @@
 
 							  <form method="POST" action="{{ route('register') }}">
                              @csrf
-
+								
 								<div class="form-group">
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
 										</div>
-										<input type="text" id="f_name" name="f_name" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="First Name">
+										<input type="text" id="name" name="name" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="First Namee">
 									</div>
 								</div>
 
