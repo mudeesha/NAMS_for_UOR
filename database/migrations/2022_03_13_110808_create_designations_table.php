@@ -18,6 +18,7 @@ class CreateDesignationsTable extends Migration
             $table->string('permission_id');
             $table->foreign('permission_id')->references('permission_id')->on('permissions');
             $table->string('designation_name');
+            $table->integer('carder_count');
             $table->timestamps();
         });
     }
