@@ -15,9 +15,11 @@ use App\Http\Controllers\Backend\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+
+Route::get('/',[AdminController::class, 'login']);
+
+
+
 Route::get('/profile', function () {
     return view('profile');
 });
@@ -43,6 +45,15 @@ Route::prefix('users')->group(function(){
 
 });
 Route::get('/profile',[UserController::class, 'ShowProfile'])->name('Show.Profile');
+
+Route::prefix('temp_users')->group(function(){
+
+    Route::view('upload','upload');
+    Route::post('upload',[App\Http\Controllers\UploadController::class,'index']);
+
+    
+
+});
 
 
 

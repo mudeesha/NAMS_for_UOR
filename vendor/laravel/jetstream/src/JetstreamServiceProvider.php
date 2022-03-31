@@ -259,7 +259,7 @@ class JetstreamServiceProvider extends ServiceProvider
         });
 
         Fortify::registerView(function () {
-            return Inertia::render('Auth/Register');
+            return Inertia::render('register');
         });
 
         Fortify::verifyEmailView(function () {
