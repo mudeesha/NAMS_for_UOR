@@ -1,7 +1,14 @@
 <h1>Upload File</h1>
 <form action="" method="POST" enctype="multipart/form-data"> <!--multipart use when upload rich data file-->
-    @csfr
-    <input type="file" name="file"><br><br>
-    <button type="submit">Upload File</button>    
+    @csrf
+    <hr>
+    <h4>Application</h4>
+    <input type="file" name="application">
+    <button type="submit">Upload File</button> <hr>
+    
+    <hr>
+    <h4>Id copy</h4>
+    <input type="file" name="id">
+    <button type="submit">Upload File</button> <hr>
 </form>
  

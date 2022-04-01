@@ -46,14 +46,10 @@ Route::prefix('users')->group(function(){
 });
 Route::get('/profile',[UserController::class, 'ShowProfile'])->name('Show.Profile');
 
-Route::prefix('temp_users')->group(function(){
 
-    Route::view('upload','upload');
-    Route::post('upload',[App\Http\Controllers\UploadController::class,'index']);
+    Route::view('upload','tempory_user/upload');
+    Route::post('upload',[App\Http\Controllers\TemporaryUserController::class,'application','id']);
 
-    
-
-});
 
 
 
