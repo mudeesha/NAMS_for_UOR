@@ -46,10 +46,21 @@ Route::prefix('users')->group(function(){
 });
 Route::get('/profile',[UserController::class, 'ShowProfile'])->name('Show.Profile');
 
+Route::prefix('temp_user')->group(function(){
 
     Route::view('upload','tempory_user/upload');
     Route::post('upload',[App\Http\Controllers\TemporaryUserController::class,'application','id']);
 
+    Route::view('dashboard','tempory_user/index');
+    //Route::post('dashboard',[App\Http\Controllers\TemporaryUserController::class,'returnDashboard']);
+
+    //Route::view('dashboard/uploads','tempory_user/upload');
+
+    Route::get('/upload',[App\Http\Controllers\TemporaryUserController::class, 'toUploadPage'])->name('temp_user.upload');
+
+    Route::view('/application','tempory_user/registration/application');
+    Route::post('/application',[App\Http\Controllers\TemporaryUserController::class,'addData']);
 
 
+});
 

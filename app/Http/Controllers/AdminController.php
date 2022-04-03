@@ -9,10 +9,11 @@ class AdminController extends Controller
 {
     public function login(){
        
-        return view('tempory_user.login');
+        return view('auth.login');
     }
     
     public function Logout(){
+        //need session clear
         Auth::logout();
         return Redirect()->route('login');
     }

@@ -10,5 +10,7 @@
     <h4>Id copy</h4>
     <input type="file" name="id">
     <button type="submit">Upload File</button> <hr>
+
+    <button type="submit">Done</button>
 </form>
  
