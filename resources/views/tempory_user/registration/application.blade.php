@@ -1,75 +1,293 @@
-<h2>HTML Forms</h2>
+@extends('tempory_user.temp_user_master')
+@section('tempory_user')
 
-<form action="application" method="POST">
-    @csrf
 
-  <label>surname:</label><br>
-  <input type="text" id="surname" name="surname"><br>
 
-  <label>First Name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
+<div class="content-wrapper">
+	  <div class="container-full">
 
-  <label>Middle Name:</label><br>
-  <input type="text" id="mname" name="mname"><br>
 
-  <label>Last Name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
+
+      <section class="content">
+
+<!-- Basic Forms -->
+ <div class="box">
+   <div class="box-header with-border">
+     <h4 class="box-title">New Employee's Application</h4>
+     <h6 class="box-subtitle">University of Ruhuna </h6>
+   </div>
+   <!-- /.box-header -->
+   <div class="box-body">
+     <div class="row">
+       <div class="col">
+
+           <form method="post" action="application">
+           @csrf 
+             <div class="row">
+               <div class="col-12">		
+
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Surname <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="surname" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>First Name <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="fname" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
   
-  <label>gender:</label><br>
-  <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label><br>
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Middle Name <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="mname" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
 
-  <label for="civil_status">Civil Status:</label><br>
-  <input type="text" id="civil_status" name="civil_status"><br>
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Last Name <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="lname" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
+               
 
-  <label>Current Address:</label><br>
-  <input type="text" id="current_postal_address" name="current_postal_address"><br>
+            <div class="row">
+              <div class="col-md-6">                  
+                <div class="form-group">
+                  <h5>Gender <span class="text-danger">*</span></h5>
+                    <div class="controls">
+                      <input type="radio" id="male" name="gender" value="male" class="form-control">
+                      <label for="male">Male</label>
+                      <input type="radio" id="female" name="gender" value="female" class="form-control">
+                      <label for="female">Female</label>
+                    <div class="help-block"></div></div>
+                </div>
+              </div>
 
-  <label>Permenent Address:</label><br>
-  <input type="text" id="permenant_postal_address" name="permenant_postal_address"><br>
 
-  <label>Current Mobile No:</label><br>
-  <input type="number" id="current_mobile" name="current_mobile"><br>
 
-  <label for="permenant_mobile">Permenent Mobile No:</label><br>
-  <input type="number" id="permenant_mobile" name="permenant_mobile"><br>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <h5>Civil Status <span class="text-danger">*</span></h5>
+                      <div class="controls">
+                        <input type="text" name="civil_status" class="form-control" required="" data-validation-required-message="This field is required"> 
+                          <div class="help-block">
+                          </div>
+                      </div>
+                  </div>
+                 </div>
 
-  <label for="police">Police Devision:</label><br>
-  <input type="text" id="police_division" name="police_division"><br>
+             </div>
 
-  <label for="email">email:</label><br>
-  <input type="email" id="email" name="email"><br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Current Address <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="current_postal_address" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
 
-  <label for="dob">Birthday:</label><br>
-  <input type="date" id="dob" name="dob"><br>
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Permenent Address <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="permenant_postal_address" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
 
-  <label for="age_as_at_closing_date">Age as Closing Date:</label><br>
-  <input type="number" id="age_as_at_closing_date" name="age_as_at_closing_date"><br>
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Current Mobile No <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="tel" pattern="+94[7-9]{2}-[0-9]{3}-[0-9]{4}" name="current_mobile" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
 
-  
-  <label for="citizenship">Citizenship:</label><br>
-  <input type="text" id="citizenship" name="citizenship"><br>
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Permenent Mobile <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="tel" pattern="+94[7-9]{2}-[0-9]{3}-[0-9]{4}" name="permenant_mobile" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
 
-  
-  <label for="nic">NIC Number:</label><br>
-  <input type="text" id="nic" name="nic"><br>
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Police Devision <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="police_division" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
 
-  
-  <label for="driving_licen_no">Driving Licence:</label><br>
-  <input type="text" id="driving_licen_no" name="driving_licen_no"><br>
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>email <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="email" name="email" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
 
-  
-  <label for="driving_licen_issuing_date">Driving Licence issued date:</label><br>
-  <input type="date" id="driving_licen_issuing_date" name="driving_licen_issuing_date"><br>
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Birthday <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="date" name="dob" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
 
-  
-  <label for="profile_photo_path">Photo:</label><br>
-  <input type="file" id="profile_photo_path" name="profile_photo_path"><br>
-  <button type="submit">Upload File</button>
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Age as Closing Date <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="number" name="age_as_at_closing_date" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
 
-  <input type="submit" value="Next">
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Citizenship <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="citizenship" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
 
-  
-</form> 
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>NIC Number <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="nic" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Driving Licence <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="text" name="driving_licen_no" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Driving Licence issued date <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="date" name="driving_licen_issuing_date" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Job Role <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <select name="designation" id="select" required="" class="form-control">
+                               <option value="" disabled="">Select Your Role</option>
+                               <option value="Registrar">Registrar</option>
+                               <option value="manager_assistent">Manager Assistent</option>
+                               <option value="security">Security</option>
+                               <option value="helper">Helper</option>
+                               <option value="technical_officer">Technical Officer</option>
+                               <option value="manager_assistent">Manager Assistent</option>
+                               <option value="Other">Other</option>
+              </select>
+            <div class="help-block"></div>
+        </div>
+      </div>
+  </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Photo <span class="text-danger">*</span></h5>
+            <div class="controls">
+              <input type="file" name="profile_photo_path" class="form-control" required="" data-validation-required-message="This field is required">
+                <div class="help-block"></div>
+            </div>
+        </div> 
+      </div>
+  </div> 
+
+                <div class="text-xs-right">
+                   <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">
+               </div>
+                
+            
+               
+           </form>
+           <div></div>
+       </div>
+       <!-- /.col -->
+     </div>
+     <!-- /.row -->
+   </div>
+   <!-- /.box-body -->
+ </div>
+ <!-- /.box -->
+
+</section>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+@endsection

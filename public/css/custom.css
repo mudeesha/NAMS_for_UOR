@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); 
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.show1-btn{
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3498db;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.show1-btn, .form-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#show1{
+  display: none;
+}
+.form-container{
+  display: none;
+  background: #fff;
+  width: 800px;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+#show1:checked ~ .form-container{
+  display: block;
+}
+.form-container .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.form-container .close-btn:hover{
+  color: #3498db;
+}
+
+form .btn{
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+} 
+form .btn:hover .inner{
+  left: 0;
+} 
+ form .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+
+form .btn{
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+} */
+form .btn:hover .inner{
+  left: 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.form-container .main-text{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* form */
+
+.checkbox{
+  height: 60px;
+  width: 150px;
+  padding: 10px;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+  justify-content: space-between;
+  display: inline-block;
+  
+}
+.checkbox input{
+  outline: none;
+  height: 20px;
+  width: 45px;
+  border-radius: 50px;
+  -webkit-appearance: none;
+  position: relative;
+  background: #e6e6e6;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.checkbox input:checked{
+  background: #664AFF;
+}
+.checkbox input:before{
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 20px;
+  background: linear-gradient(#fff,#f2f2f2,#e6e6e6,#d9d9d9);
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  border-radius: 50px;
+  transform: scale(0.85);
+  transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input:checked:before{
+  left: 25px;
+}
+.checkbox .text:before{
+  content: "Disabled";
+  font-size: 15px;
+  padding-right: 6px;
+  font-weight: 500;
+  color: #bfbfbf;
+}
+input:checked ~ .text:before{
+  color: #664AFF;
+  font-size: 15px;
+  padding-right: 6px;
+  font-weight: 500;
+  content: "Available";
+}
+
+.checkbox-raw{
+	padding:20px;	
+}
+
+.main_label{
+	display: inline-block;
+	height: 60px;
+	width: 150px;
+	padding:10px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+	
+}
